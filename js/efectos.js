@@ -69,4 +69,45 @@ $(document).ready(function(){
 		}, 4000);
 	});
 
+
+	if (annyang) {
+		console.log('funciona');
+		// Let's define our first command. First the text we expect, and then the function it should call
+		var commands = {
+			'acerca': function () {
+				if ($(window).width() > 768) {
+					$('html, body').animate({
+						scrollTop: acercaDe - 250
+					}, 1000);
+				} else {
+					$('html, body').animate({
+						scrollTop: acercaDe
+					}, 1000);
+				}
+			}, 
+			'articulos': function(){
+				$('html, body').animate({
+					scrollTop: articulos
+				}, 2000);
+			},
+			'galería': function(){
+				$('html, body').animate({
+					scrollTop: galeria
+				}, 3000);
+			},
+			'ubicación': function(){
+				$('html, body').animate({
+					scrollTop: ubicacion
+				}, 4000);
+			}
+		};
+
+		annyang.setLanguage('es-PE');
+		// Add our commands to annyang
+		annyang.addCommands(commands);
+
+		// Start listening. You can call this here, or attach this call to an event, button, etc.
+		annyang.start();
+	}
+
 });

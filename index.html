@@ -174,29 +174,7 @@
 	<script src="js/parallax.js" type="text/javascript"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
 	<script>
-		if (annyang) {
-			// Let's define our first command. First the text we expect, and then the function it should call
-			var commands = {
-				'acerca': function () {
-					if ($(window).width() > 768) {
-						$('html, body').animate({
-							scrollTop: acercaDe - 250
-						}, 1000);
-					} else {
-						$('html, body').animate({
-							scrollTop: acercaDe
-						}, 1000);
-					}
-				}
-			};
-
-			annyang.setLanguage('es-PE');
-			// Add our commands to annyang
-			annyang.addCommands(commands);
-
-			// Start listening. You can call this here, or attach this call to an event, button, etc.
-			annyang.start();
-		}
+		
 	</script>
 </body>
 
